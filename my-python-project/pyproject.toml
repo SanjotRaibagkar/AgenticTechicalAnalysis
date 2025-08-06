@@ -1,0 +1,31 @@
+[project]
+name = "techanalysis"
+version = "0.1.0"
+description = "Technical analysis tools and APIs for NSE data and Zerodha integration"
+authors = [
+    { name="Your Name", email="your.email@example.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "Flask>=2.2.0",
+    "requests>=2.25.1",
+    "pytest>=6.2.4",
+    "pandas",
+    "kiteconnect",
+    "setuptools",
+    "mcp[cli]>=1.12.3",
+    "httpx>=0.28.1",
+    "langgraph>=0.6.3",
+    "langchain-core>=0.3.72",
+    "langchain-groq>=0.3.6",
+    "groq>=0.30.0",
+    "python-dotenv>=1.1.1",
+    "fastmcp>=2.11.1",
+    "click>=8.2.1",
+    "rich>=14.1.0",
+    "langchain>=0.3.27",
+    "langchain-mcp-adapters>=0.1.9",
+    "streamlit>=1.47.1",
+    "plotly>=6.2.0",
+]
+
