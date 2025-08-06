@@ -9,7 +9,7 @@ load_dotenv("config/settings.env")
 
 
 class Settings(BaseSettings):
-    groq_api_key: str = os.getenv()
+    groq_api_key: str = os.getenv("GROQ_API_KEY", "")
     mcp_server_host: str = os.getenv("MCP_SERVER_HOST", "localhost")
     mcp_server_port: int = int(os.getenv("MCP_SERVER_PORT", "8000"))
     default_model: str = os.getenv("DEFAULT_MODEL", "lllama3-8b-8192")
