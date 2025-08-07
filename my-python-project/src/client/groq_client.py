@@ -173,7 +173,32 @@ Available agents:
                     console.print(f"📄 Raw result: {result}", style="yellow")
             
             console.print()
+
+    async def video_analysis_mode(self):
+        """Interactive video analysis mode"""
+        console.print(Panel("🎬 Video Strategy Analysis Mode", style="magenta bold"))
+        console.print("Analyze videos to extract operational strategies and actionable insights.\n")
+        console.print("Type 'back' to return to main menu.\n")
+        
+        while True:
+            console.print("📋 Video Analysis Options:")
+            console.print("1. 📹 Analyze Single Video")
+            console.print("2. 📁 Batch Analyze Directory")
+            console.print("3. 🔙 Back to Main Menu")
+            
+            choice = Prompt.ask("Select option", choices=["1", "2", "3"])
+            
+            if choice == "3":
+                break
+            elif choice == "1":
+                await self._single_video_analysis()
+            elif choice == "2":
+                await self._batch_video_analysis()
+            
+            console.print()
     
+  
+
     async def chat_mode(self):
         """Interactive chat mode"""
         console.print(Panel("💬 Chat Assistant Mode", style="cyan bold"))
